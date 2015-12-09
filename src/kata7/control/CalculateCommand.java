@@ -18,7 +18,7 @@ public class CalculateCommand implements command{
     
     @Override
     public void execute() {
-
+        
     }
     
 }
