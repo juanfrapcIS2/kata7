@@ -4,6 +4,6 @@ import kata7.model.Attribute;
 
 public interface AttributeDialog {
     
-    public Attribute Dialog();
+    public Attribute attribute();
     
 }

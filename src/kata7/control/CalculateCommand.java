@@ -4,7 +4,7 @@ import kata7.view.AttributeDialog;
 import kata7.view.HistogramDisplay;
 import kata7.view.PopulationDialog;
 
-public class CalculateCommand implements command{
+public class CalculateCommand implements Command{
 
     private final AttributeDialog attributeDialog;
     private final PopulationDialog populationDialog ;
