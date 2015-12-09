@@ -5,6 +5,7 @@ import javax.swing.JPanel;
 import kata7.model.Histogram;
 import kata7.view.HistogramDisplay;
 import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
@@ -19,12 +20,19 @@ public class HistogramPanel extends JPanel implements HistogramDisplay{
     
     @Override
     public Histogram histogram() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return histogram;
     }
 
     @Override
-    public void show(Histogram histogram) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void show(Histogram histograma) {
+        this.histogram=histograma;
+        this.reload();
+    }
+    
+    private void reload() {
+        this.removeAll();
+        this.add(new ChartPanel(createChart(createDataset(histogram))));
+        this.revalidate();
     }
     
     private JFreeChart createChart(DefaultCategoryDataset dataSet) {
@@ -45,5 +53,5 @@ public class HistogramPanel extends JPanel implements HistogramDisplay{
         return dataSet;
 
     }
-
+    
 }

@@ -6,5 +6,5 @@ public interface HistogramDisplay {
 
     public Histogram histogram();
     
-    public void show(Histogram histogram);
+    public void show(Histogram histograma);
 }
